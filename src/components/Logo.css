@@ -1,0 +1,23 @@
+.top_section{
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    gap: 25%;
+    font-size: 18px;
+    text-decoration-line: calc(15);
+    color: white;
+    background-color: rgb(52, 22, 80);
+   }
+   
+   .logo{
+    font-size: 20PX;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    
+    }
+   .bars{
+    cursor: pointer;
+   } 
+
+   

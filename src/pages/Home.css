@@ -1,0 +1,94 @@
+/* .table{
+    width:100%;
+    margin:20px 20px;
+    padding:20px 20px;
+    width: 500%;
+    height: 100%;
+
+} */
+/* .admin {
+    padding:10px 20px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    border: 2px solid black;
+    padding: 7px;
+    font-size: 20px;
+    align-items: center;
+
+} */
+.admin{
+    width:100%;
+}
+.admin th{
+    margin:auto;
+    padding:10px 20px;
+    width: 175%;
+    border-bottom: 1px solid black;
+    border: 2px solid black;
+    padding: 7px;
+    font-size: 20px;
+    align-items: center;
+
+}
+/* .stDetail{
+    padding: 40px;
+   
+} */
+/* .list-students{
+    background-color: rgb(245, 133, 133);
+    padding: 10px;
+} */
+.st-details table,th,td{   
+    border-collapse: collapse;
+    background-color: rgb(245, 133, 133);
+    border: 2px solid black;
+    padding: 7px;
+    font-size: 20px;
+    align-items: center;
+}
+#UpperBar{
+    display:flex;
+    background-color:white;
+    align-content:center;
+    justify-content:center;
+    width:122%;
+    margin-top:10px;
+    margin-right:5px;
+    margin-left:5px;
+
+
+
+}
+#UpperBar div{
+    background-color: rgb(245, 133, 133);
+    align-items:center;
+    font-size: large;
+    font-weight: 500;
+    margin:7px;
+    width:100%;
+    padding:20px;
+}
+
+/* th {
+    border-bottom: 1px solid black;
+    border: 2px solid black;
+    padding: 7px;
+    font-size: 20px;
+    align-items: center;
+}
+ td {
+    text-align: center;
+    padding: 7px;
+    font-size: 20px;
+    border: 2px solid rgb(18, 18, 18);
+ }
+ tr{
+    padding: 10px;
+ }  */
+ /* table,th,td{
+    border-bottom: 1px solid black;
+    border: 2px solid black;
+    padding: 7px;
+    font-size: 20px;
+    align-items: center;
+ } */

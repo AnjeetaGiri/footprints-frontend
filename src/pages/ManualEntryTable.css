@@ -1,0 +1,14 @@
+.table-box{
+    overflow-x:auto;
+}
+table{
+    overflow-x:auto;
+    border: 1px solid;
+    width:220%;
+    margin-top:40px;
+}
+th,td{
+    border: 1.5px solid;
+    width:30%;
+
+}
