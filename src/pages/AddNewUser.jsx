@@ -3,6 +3,7 @@ import { Button } from "react-bootstrap";
 import "./AddNewUser.css";
 import styles from "../myStyles.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { FaHiking } from "react-icons/fa";
 const AddNewUser = () => {
   const ClickHandler = () => {};
   const [user, setUser] = useState({
@@ -20,7 +21,8 @@ const AddNewUser = () => {
     console.log(e);
     const{name,value} = e.target;
     setUser({ ...user, [name]:value });
-  }
+  } 
+  //FaHiking
   // const PostData = async(e)=>{
   //     e.preventDefault();
   //     const{ name, rollNo, mobileNo, email, branch, session, hostel, roomNo, role }=user;

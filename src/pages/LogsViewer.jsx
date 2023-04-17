@@ -15,7 +15,7 @@ const handleInputs = (e) => {
     setUser({ ...user, [name]:value });
 }
 const renderTable=()=>{
-  const[table,setTable]=useState("Late")
+  const[table,setTable]=useState("")
 }
   return (
     <div className="user-detail">
