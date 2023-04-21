@@ -6,6 +6,8 @@ import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "../myStyles.module.css";
 import ManualEntryTable from "./ManualEntryTable.jsx";
+import "./ManualEntryTable.css";
+
 
 const MakeManualEntry = () => {
   const [enterUserId, setEnterUserId] = useState("");
