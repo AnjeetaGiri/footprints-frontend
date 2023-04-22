@@ -1,5 +1,11 @@
- 
- /* .form-AddNewUser{
+/* input.form-AddNewUser{
+    margin:10px;
+    padding:10px;
+} */
+/* .coln-AddNewUser label{
+    margin:10px;
+}
+ .form-AddNewUser{
     width: 40%;
     height: 2rem;
     margin: 0px 0px;
@@ -25,6 +31,88 @@ div.name-AddNewUser{
     width: 50%;
     height: 2rem;
     padding: 0px;
-}  */
+} 
+b{
+    margin:10px;
+} */
+/* .wrapper rounded bg-white{
+    height:600px;
+}
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+.row {
+    max-width:50%;
+    margin-left:100px;
+    margin-bottom:100px;
+    height:600px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+} */
+
+
+* {
+  box-sizing: border-box;
+}
+
+.input-AddNewUsertype, select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.col-25 label{
+  /* padding: 4px 4px 4px 0; */
+  display: inline-block;
+}
+
+.box {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin:25px 280px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.h3{
+  text-align: center;
+}
+
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75{
+    width: 100%;
+    margin-top: 0;
+  }
+}
+  
+
 
 

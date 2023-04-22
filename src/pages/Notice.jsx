@@ -23,6 +23,17 @@ const Notice = () => {
   const toggleTab = (index) => {
     setToggleState(index);
   };
+  function DatePick(){
+    const [date,setDate]=useState();
+    console.log("Date",date);
+    return(
+      <div className="input-date">
+      <h1>Select Date:{date}</h1>
+      <input type="date" onChange={e=>setDate(e.target.value)}/>
+
+      </div>
+    )
+  }
   return (
     <div className="user-detail">
       {/* <h2>Send Notice:</h2> */}
@@ -85,20 +96,6 @@ const Notice = () => {
             <br />
             <input type="checkbox" /> GH
           </div>
-
-          {/* <div
-            className={
-              toggleState === 3 ? "content  active-content" : "content"
-            }
-          >
-            <h3>Select Branch</h3>
-            <hr />
-            <input type="checkbox" /> CSE
-            <br />
-            <input type="checkbox" /> EE
-            <br />
-            <input type="checkbox" /> EL
-          </div> */}
         </div>
       </div>
       <div className="text-box">
@@ -112,22 +109,8 @@ const Notice = () => {
         Send
       </button>
       <button type="button" className="b2">
-        {/* <DemoItem
-          label={'"year"", "month", "day", "hours", "minutes" and "seconds"'}
-        >
-          <DateTimePicker
-            views={["year", "month", "day", "hours", "minutes", "seconds"]}
-          />
-        </DemoItem>
-        <DemoItem label={'"day", "hours"'}>
-          <DateTimePicker views={["day", "hours"]} />
-        </DemoItem>
-        <DemoItem label={'"year", "day", "hours", "minutes", "seconds"'}>
-          <DateTimePicker
-            views={["year", "day", "hours", "minutes", "seconds"]}
-          />
-        </DemoItem> */}
-        {/* <DatePicker/> */}
+        <label for="dateTimePick">Schedule</label>
+        <input type="datetime-local" id="dateTimePick" name="dateTimePick"></input>
       </button>
       {/* <DemoItem
         label={'"year"", "month", "day", "hours", "minutes" and "seconds"'}

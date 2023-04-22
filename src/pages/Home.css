@@ -1,3 +1,43 @@
+/* ------Upper Bar styling------ */
+#UpperBar{
+    display:flex;
+    background-color:white;
+    align-content:center;
+    justify-content:center;
+    /* width:220%; */
+    margin-top:10px;
+    margin-right:5px;
+    margin-left:5px;
+    text-align:center;
+
+}
+#UpperBar div{
+    background-color: rgb(245, 133, 133);
+    align-items:center;
+    font-size: large;
+    font-weight: 500;
+    margin:7px;
+    width:100%;
+    padding:20px;
+}
+/* ------heading Styling-------- */
+.Heading{
+    margin:20px 10px;
+}
+.userTable{
+    margin:20px;
+    margin-left:15px;
+    margin-right:15px;
+    width:1300px;
+    height:200px;
+    text-align:center;
+    padding:20px;
+    background-color: rgb(245, 133, 133);
+    text-decoration: none;
+    font-size: large;
+    font-weight:300;
+
+}
 /* .table{
     width:100%;
     margin:20px 20px;
@@ -16,7 +56,7 @@
     align-items: center;
 
 } */
-.admin{
+/* .admin{
     width:100%;
 }
 .admin th{
@@ -29,7 +69,7 @@
     font-size: 20px;
     align-items: center;
 
-}
+} */
 /* .stDetail{
     padding: 40px;
 
@@ -39,57 +79,16 @@
     background-color: rgb(245, 133, 133);
     padding: 10px;
 } */
-.st-details table,th,td{   
+/* .st-details table,th,td{   
     border-collapse: collapse;
     background-color: rgb(245, 133, 133);
     border: 2px solid black;
     padding: 7px;
     font-size: 20px;
     align-items: center;
-}
-#UpperBar{
-    display:flex;
-    background-color:white;
-    align-content:center;
-    justify-content:center;
-    width:122%;
-    margin-top:10px;
-    margin-right:5px;
-    margin-left:5px;
-
-
-
-}
-#UpperBar div{
-    background-color: rgb(245, 133, 133);
-    align-items:center;
-    font-size: large;
-    font-weight: 500;
-    margin:7px;
     width:100%;
-    padding:20px;
-}
+    height:80%;
+}*/
 
-/* th {
-    border-bottom: 1px solid black;
-    border: 2px solid black;
-    padding: 7px;
-    font-size: 20px;
-    align-items: center;
-}
- td {
-    text-align: center;
-    padding: 7px;
-    font-size: 20px;
-    border: 2px solid rgb(18, 18, 18);
- }
- tr{
-    padding: 10px;
- }  */
- /* table,th,td{
-    border-bottom: 1px solid black;
-    border: 2px solid black;
-    padding: 7px;
-    font-size: 20px;
-    align-items: center;
- } */
+
+

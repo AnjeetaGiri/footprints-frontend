@@ -1,3 +1,15 @@
+.TopBar{
+    display:flex;
+    background-color:white;
+    align-content:center;
+    justify-content:center;
+    /* width:220%; */
+    margin-top:10px;
+    margin-right:5px;
+    margin-left:5px;
+    text-align:center;
+
+}
 
 .user-detail{
     font-size: 25px;

@@ -11,7 +11,7 @@ export default function Late() {
     <div className="table-box">
         <table>
             <tr>
-                <th className="userID">UserID</th>
+                <th>UserID</th>
                 <th>Date/Time</th>
                 <th>Done By</th>
                 <th>Place</th>
