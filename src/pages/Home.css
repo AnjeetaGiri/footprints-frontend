@@ -17,7 +17,7 @@
     font-size: large;
     font-weight: 500;
     margin:7px;
-    width:100%;
+    /* width:100%; */
     padding:20px;
 }
 /* ------heading Styling-------- */
@@ -37,6 +37,27 @@
     font-size: large;
     font-weight:300;
 
+}
+@media only screen and (max-width:600px) {
+    #UpperBar{
+        width:100%;
+        margin:0;
+     
+        padding:0;
+    }
+    #UpperBar div{
+        justify-content:left;
+        align-items: flex-start;
+        margin:4px;
+        padding:3px;
+    }
+    .home,.userTable,.Heading{
+        width:100%;
+        margin:0;
+        padding:0; 
+    }
+   
+    
 }
 /* .table{
     width:100%;

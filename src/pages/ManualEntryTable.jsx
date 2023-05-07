@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './Late.css';
 
 const data=[
@@ -7,7 +7,11 @@ const data=[
     {rollno:"1908410100011",date:"10/05/2023",doneBy:"Anjeeta",place:"Churk",out:'9.35 AM',changes:""},
 ]
 export default function Late() {
-  return (
+  const [state,setState]=useState(false);
+  const toggle=()=>{
+    setState(!state);
+  }
+  return ( 
     <div className="table-box">
         <table>
             <tr>
@@ -19,8 +23,7 @@ export default function Late() {
                 <th>Make Changes</th>
             </tr>
             <tbody>
-                {
-                    data.map((value,key)=>{
+                {data.map((value,key)=>{
                         return(
                             <tr key={key}>
                                 <td>{value.rollno}</td>
@@ -28,11 +31,10 @@ export default function Late() {
                                 <td>{value.doneBy}</td>
                                 <td>{value.place}</td>
                                 <td>{value.out},{value.in}</td>
-                                <td>{value.changes}</td>
-                            </tr>
-                        )
-                    })
-                }
+                                {/* <td>{value.changes}</td> */}
+                                <td><button onClick={toggle} className={'toggle--button'+(state?'toggle--in':'')}> {state?'in':'out'}</button></td>
+                            </tr>)
+                    })}
             </tbody>
             
         </table>

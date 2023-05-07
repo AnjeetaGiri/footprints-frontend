@@ -23,16 +23,15 @@ const Notice = () => {
   const toggleTab = (index) => {
     setToggleState(index);
   };
-  function DatePick(){
-    const [date,setDate]=useState();
-    console.log("Date",date);
-    return(
+  function DatePick() {
+    const [date, setDate] = useState();
+    console.log("Date", date);
+    return (
       <div className="input-date">
-      <h1>Select Date:{date}</h1>
-      <input type="date" onChange={e=>setDate(e.target.value)}/>
-
+        <h1>Select Date:{date}</h1>
+        <input type="date" onChange={(e) => setDate(e.target.value)} />
       </div>
-    )
+    );
   }
   return (
     <div className="user-detail">
@@ -100,18 +99,26 @@ const Notice = () => {
       </div>
       <div className="text-box">
         <div className="form-group">
-          <label for="myBox">Enter your message here:</label>
+          <label className="label-notice" for="myBox">
+            Enter your message here:
+          </label>
           <textarea className="form-control" id="myBox" rows="7"></textarea>
+        </div>
+        <div className="btn-notice">
+          <button type="button" className="b1">
+            Send
+          </button>
+          <button type="button" className="b2">
+            <label for="dateTimePick">Schedule</label>
+            <input
+              type="datetime-local"
+              id="dateTimePick"
+              name="dateTimePick"
+            ></input>
+          </button>
         </div>
       </div>
 
-      <button type="button" className="b1">
-        Send
-      </button>
-      <button type="button" className="b2">
-        <label for="dateTimePick">Schedule</label>
-        <input type="datetime-local" id="dateTimePick" name="dateTimePick"></input>
-      </button>
       {/* <DemoItem
         label={'"year"", "month", "day", "hours", "minutes" and "seconds"'}
       >

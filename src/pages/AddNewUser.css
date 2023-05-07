@@ -80,6 +80,7 @@ input[type=text], select {
   background-color: #f2f2f2;
   padding: 20px;
   margin:25px 280px;
+  max-height:fit-content;
 }
 
 .col-25 {
@@ -111,7 +112,14 @@ input[type=text], select {
     width: 100%;
     margin-top: 0;
   }
+  .box{
+    margin:0;
+  }
+  .wrapper rounded bg-white{
+    margin:0;
+  }
 }
+
   
 
 

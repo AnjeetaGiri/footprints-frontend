@@ -2,7 +2,7 @@
     overflow-x:auto;
 }
 table{
-    overflow-x:auto;
+    
     border: 1px solid;
     width:220%;
     margin-top:40px;
@@ -12,3 +12,9 @@ th,td{
     width:30%;
 
 }
+@media screen and (max-width: 600px) {
+    table{
+        margin:0;
+    }
+    
+  }

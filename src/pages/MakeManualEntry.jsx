@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState,setState,useEffect} from "react";
 import ManualData from "../components/ManualData";
 import "./MakeManualEntry.css";
 import { Button } from "react-bootstrap";
@@ -10,6 +10,13 @@ import "./ManualEntryTable.css";
 
 
 const MakeManualEntry = () => {
+ 
+  const [content, setContent]=useState(<></>); 
+   
+const handleClick =event =>{
+  setContent(<ManualEntryTable/>);
+}
+
   const [enterUserId, setEnterUserId] = useState("");
   const uIdChangeHandelar = (event) => {
     setEnterUserId(event.target.value);
@@ -23,7 +30,7 @@ const MakeManualEntry = () => {
     console.log(entryData);
     setEnterUserId("");
   };
-
+ 
   return (
     <div onSubmit={submitHandler} className="manual-entry">
       <div>
@@ -40,10 +47,11 @@ const MakeManualEntry = () => {
         <br />
       </label>
       <br />
-      <Button className={styles.button}>SUBMIT</Button>
-      <div className="userTable">
-          <ManualEntryTable/>
-      </div>
+      <Button className={styles.button} onClick={handleClick}>SUBMIT</Button>
+    
+<div className="detail">
+  {content}
+</div>
     </div>
   );
 };
