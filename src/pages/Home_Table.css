@@ -1,0 +1,198 @@
+/* ------Upper Bar styling------ */
+#UpperBar{
+    display:flex;
+    background-color:white;
+    align-content:center;
+    justify-content:center;
+    /* width:200%; */
+    /* margin-top:10px;
+    margin-right:5px;
+    margin-left:5px; */
+    text-align:center;
+
+}
+#UpperBar div{
+    background-color: rgba(19, 22, 220, 0.341);
+    align-items:center;
+    font-size: large;
+    font-weight: 500;
+    margin:7px;
+    width:100%;
+    padding:12px;
+}
+/* ------heading Styling-------- */
+/* ----------Previous Code---------- */
+/* .Heading{
+    margin:20px 10px;
+} */
+/* .userTable{
+    margin:20px;
+    margin-left:15px;
+    margin-right:15px;
+    width:1300px;
+    height:200px;
+    text-align:center;
+    padding:20px;
+    background-color: rgb(245, 133, 133);
+    text-decoration: none;
+    font-size: large;
+    font-weight:300;
+
+}
+@media only screen and (max-width:600px) {
+    #UpperBar{
+        width:100%;
+        margin:0;
+     
+        padding:0;
+    }
+    #UpperBar div{
+        justify-content:left;
+        align-items: flex-start;
+        margin:4px;
+        padding:3px;
+    }
+    .home,.userTable,.Heading{
+        width:100%;
+        margin:0;
+        padding:0; 
+    }
+   
+    
+} */ 
+/* -------Till Here--------- */
+/* .userTable{
+    width:100%;
+    margin:20px 20px;
+    padding:20px 20px;
+    width: 500%;
+    height: 100%;
+
+} */
+/* .admin {
+    padding:10px 20px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    border: 2px solid black;
+    padding: 7px;
+    font-size: 20px;
+    align-items: center;
+
+} */
+/* .admin{
+    width:100%;
+}
+.admin th{
+    margin:auto;
+    padding:10px 20px;
+    width: 175%;
+    border-bottom: 1px solid black;
+    border: 2px solid black;
+    padding: 7px;
+    font-size: 20px;
+    align-items: center;
+
+} */
+/* .stDetail{
+    padding: 40px;
+
+   
+}l */
+/* .list-students{
+    background-color: rgb(245, 133, 133);
+    padding: 10px;
+} */
+/* .st-details userTable,th,td{   
+    border-collapse: collapse;
+    background-color: rgb(245, 133, 133);
+    border: 2px solid black;
+    padding: 7px;
+    font-size: 20px;
+    align-items: center;
+    width:100%;
+    height:80%;
+}*/
+
+ /* --------------New Code----------------- */
+ .home{
+    margin:20px;
+    margin-right:10px;
+    /* padding:40px; */
+    min-width:200%;
+ }
+
+ tbody{
+    margin:0;
+    padding:5px;
+    font-family:sans-serif;
+    box-sizing: border-box;
+  }
+  /* *{
+    box-sizing:border-box;
+  } */
+  .userTable{
+    width:100%;
+    border-collapse:collapse;
+    box-sizing:border-box;
+  }
+  .userTable td,.userTable th{
+    padding:6px 10px;
+    /* padding:20px 30px; */
+    border:1px solid black;
+    text-align:center;
+    background-color: rgba(19, 22, 220, 0.341);
+  
+  }
+  .userTable th{
+    background-color:rgb(0, 7, 61);
+    color:white;
+  
+  }
+  .userTable tbody tr:nth-child(even){
+    background-color:white;
+  }
+  
+  /* -----------------RESPONSIVE---------------- */
+  @media(max-width:600px){
+    .home{
+        margin:10px;
+        height:93vh;
+        overflow-x:auto;
+    }
+
+    .userTable thead{
+        display:none;
+        margin-right:10px;
+    }
+    .userTable, .userTable tbody,.userTable tr,.userTable td{
+        display:block;
+        width:100%;
+        margin-right:10px;
+    }
+    .userTable tr{
+        margin-bottom:15px;
+  
+    }
+    .userTable td{
+        text-align:center;
+        padding-left:50%;
+        position:relative;
+        background-color: rgb(245, 133, 133);
+    }
+    .userTable td::before{
+        content:attr(data-label);
+        position:absolute;
+        left:0;
+        width:30%;
+        padding-left:2px;
+        font-size:12px;
+        font-weight:bold;
+        
+    }
+    #UpperBar{
+        margin:2px;
+        padding:2px;
+        width:100%;
+    }
+  
+  }
