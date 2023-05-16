@@ -1,101 +1,148 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./FindUserDetails.css";
-// import { Button } from "react-bootstrap";
-// import "bootstrap/dist/css/bootstrap.min.css";
-// import styles from "../myStyles.module.css";
-
-// const FindUserDetails = () => {
-//   const Popup = () => {};
-//   const [user, setUser] = useState({
-//     userID: "",
-//   });
-//   const handleInputs = (e) => {
-//     console.log(e);
-//     const { name, value } = e.target;
-//     setUser({ ...user, [name]: value });
-//   };
-//   return (
-//     <div className="user-detail">
-//       <h2>Find User Details</h2>
-//       {/* ------Previous code:------ */}
-//       <label>
-//         <input
-//           className="input-text"
-//           type="text"
-//           name="userID"
-//           value={user.userID}
-//           onChange={handleInputs}
-//           placeholder="Enter userId"
-//         />
-//         <br />
-//       </label>
-//       <br />
-//       <Button className={styles.button} onClick={Popup}>
-//         PROCEED
-//       </Button>
-//       {/* <div className="btn">
-//       <button class="btn" type="button" onClick={Popup}>Submit</button>
-//       </div> */}
-//     </div>
-//   );
-// };
-
-// export default FindUserDetails;
-
+import "./data.json";
+import { Button } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import styles from "../myStyles.module.css";
 import axios from "axios";
 
+const FindUserDetails = () => {
 
 
-// const baseURL = "https://jsonplaceholder.typicode.com/posts/1";
-// const baseURL = "https://footprints-api.onrender.com/students";
+  const [user, setUser] = useState({
+    userID: "",
+    name:"",
+    email:"",
+    mob:"",
+    branch:"",
+    session:"",
+    hostel:"",
+    room_no:""
+  });
 
-// export default function FindUserDetails() {
-//   const [post, setPost] = React.useState(null);
+ 
 
-//   React.useEffect(() => {
-//     axios.get(baseURL).then((response) => {
-//       setPost(response.data);
-//     });
-//   }, []);
+  const handleInputs = (e) => {
+    console.log(e);
+    const { name, value } = e.target;
+    setUser({ ...user, [name]: value });
+   
 
-//   if (!post) return null;
-
-//   return (
-//     <div>
-//       <h1>{post.title}</h1>
-//       <p>{post.body}</p>
-//     </div>
-//   );
-// }
-
-
-export default function FindUserDetails() {
-  // const[data,setData]=useState([]);
-  var myHeaders = new Headers();
-myHeaders.append('Content-Type','application/json');
-myHeaders.append('Access-Control-Allow-Origin','*');
-myHeaders.append('Access-Control-Allow-Origin','http://localhost:3000');
-
-  var requestOptions = {
-    method: 'GET',
-    redirect: 'follow'
+    console.log(user.userID);
   };
-  
-  fetch("https://footprints-api.onrender.com/students/", requestOptions)
-    .then(response => response.text())
-    .then(result => console.log(result))
-    .catch(error => console.log('error', error));
-  // const [post, setPost] = React.useState(null);
-  // React.useEffect(()=>{
-  //   axios.get("https://footprints-api.onrender.com/students/")
-  //   .then((response)=>{
-  //     setPost(response.data);
-  //     // console.log(response);
-  //   })  
-  // },[]);
+
+  const [students, setStudents] = useState([]);
+ 
+  const apiGet= async(e)=>{
+   e.preventDefault();
+  const res= await fetch("/students",{
+    method:'GET',
+    headers: {
+                "Content-Type": "application/json"
+          },
+   })
+   const data= await res.json();
+   if(data){
+    console.log(data);
+    setStudents(data.data);
+    
+    
+    getStudent();
+   }else{
+    console.log("error");
+   }   
+  }
+ // apiGet();
+   const getStudent=()=>{
+ 
+    students.map((student) => {
+      if (student.user_id == user.userID) {
+        console.log(student.name);
+       const newuser= {
+        
+        userID: user.userID,
+        name:student.name,
+        email:student.email,
+        mob:student.mob_no,
+        branch:student.branch,
+        session:student.session,
+        hostel:student.hostel,
+        room_no:student.room_no,
+      };
+
+      setUser(newuser);
+      console.log(user.name);
+      console.log(user.branch);
+      console.log(user.hostel);
+      }
+    });
+
+    console.log(user.userID);
+   }
   return (
-    <div>
-      Axios Demoss
-    </div>
-  )
-}
+    <>  
+       {/* <div>
+      {students.map((student) => (
+        <div key={student.id}>{student.name}</div>
+      ))}
+    </div> */}
+    
+     <div className="user-detail">
+       <h2>Find User Details</h2>
+     
+      <label>
+        <input
+           className="input-text"
+           type="text"
+           name="userID"
+           value={user.userID}
+           onChange={handleInputs}
+           placeholder="Enter userId"
+         />
+         <br />
+       </label>
+       <br />
+       <Button className={styles.button} onClick={apiGet}>
+         PROCEED
+       </Button>
+
+  <div className="st_detail">
+    <h4 className="heading-4">Details of Student: </h4>
+    <table className="UserDetailTable">
+      <thead>
+           <tr>
+            <th>User ID</th>
+             <th>Email</th>
+             <th>Branch</th>
+             <th>Session</th>
+             <th>Hostel</th>
+             <th>Room No.</th>            
+          </tr>
+        </thead>
+              <tbody>
+              <tr>
+              <td data-label="Name">{user.name}</td>
+              <td data-label="Email">{user.email}</td>
+              <td data-label="Branch">{user.branch}</td>
+              <td data-label="Session">{user.session}</td>
+              <td data-label="Hostel">{user.hostel}</td>
+              <td data-label="Room_No">{user.room_no}</td>
+              </tr>
+             </tbody>
+       </table>
+      </div>
+       {/* <div className="btn">
+       <button class="btn" type="button" onClick={Popup}>Submit</button>
+       </div> */}
+     </div>
+
+  
+    </>
+  );
+
+  
+
+
+};
+
+export default FindUserDetails;
