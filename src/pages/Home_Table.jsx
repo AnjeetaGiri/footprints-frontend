@@ -3,22 +3,22 @@ import "./Home_Table.css";
 // import fakeData from './Mock-data.json'
 const Home_Table = () => {
   const[admin,setAdmin]=useState({
-    name:"Deepak Kumar",
+    name:"Deepak Sigroha",
     role:"Warden",
-    hostel:"BH-2"
+    // hostel:"BH-2"
   });
   const data=[
-    {rollNo:"1908410100011",date:"22/04/2023",doneBy:"Anjeeta",place:"Churk",status:"Out"},
-    {rollNo:"1908410100055",date:"23/04/2023",doneBy:"Saumya",place:"Robertsganj",status:"In"},
-    {rollNo:"1908410100005",date:"21/05/2023",doneBy:"Akarshit",place:"Home",status:"Out"},
-    {rollNo:"1908410100001",date:"15/05/2023",doneBy:"Abhimanyu",place:"Churk",status:"Out"},
+    {rollNo:"1908410100011",date:"22/05/2023",outTime:"7:00 PM",doneBy:"Anjeeta",place:"Churk",status:"Out"},
+    {rollNo:"1908410100055",date:"22/05/2023",outTime:"6:00 PM",doneBy:"Saumya",place:"Robertsganj",status:"Out"},
+    {rollNo:"1908410100005",date:"16/05/2023",outTime:"4:33 PM",doneBy:"Akarshit",place:"Home",status:"Out"},
+    {rollNo:"1908410100001",date:"22/05/2023",outTime:"1:45 PM",doneBy:"Abhimanyu",place:"Churk",status:"Out"},
   ]
   return (
     <div className="home">
       <div id="UpperBar">
         <div>{admin.name}</div>
         <div>{admin.role}</div>
-        <div>{admin.hostel}</div>
+        {/* <div>{admin.hostel}</div> */}
       </div>
         {/* <div className="list-students">  */}
         <div className="Heading">
@@ -53,7 +53,8 @@ const Home_Table = () => {
           <thead>
             <tr>
                 <th >Roll No.</th>
-                <th >Date/Time</th>
+                <th >Date</th>
+                <th> Out Time </th>
                 <th >Done By</th>
                 <th >Place</th>
                 <th >Status</th>
@@ -64,7 +65,8 @@ const Home_Table = () => {
             <tbody>
               <tr key={key}>
               <td data-label="Roll No.">{val.rollNo}</td>
-              <td data-label="Date/Time">{val.date}</td>
+              <td data-label="Date">{val.date}</td>
+              <td data-label="Date">{val.outTime}</td>
               <td data-label="Done By">{val.doneBy}</td>
               <td data-label="Place">{val.place}</td>
               <td data-label="Status">{val.status}</td>

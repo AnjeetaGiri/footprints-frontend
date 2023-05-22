@@ -30,25 +30,9 @@ td data-label{
     font-size:medium;
 }
 
-/* .btn {
-    background-color: #4CAF50; /* Green */
-    /* border: none;
-    color: orange;
-    padding: 5px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 10px;
-} */ 
-/* .manual-entry{
-    font-size: 25px;
-    padding: 80px ;
-    justify-content: space-around;
-    flex-direction: row;
-} */
 .input-text {
     border: 1px solid black;
-    background-color:rgb(118, 118, 233);
+    background-color: rgb(86, 226, 238);
     height:1.3rem;
     border-radius: 1rem;
     width: 100%;
@@ -57,32 +41,32 @@ td data-label{
     margin: 12px 0;
     box-sizing: border-box;   
 }
-.st_detail{
-  text-align:left;
-
-}
-/* .st_name{
-    border:2px solid black;
-    background-color:red;
-} */
-
-/* .form{
+.st-detail {
+    display: flex;
+    margin-top:50px;
+    margin-bottom:50px;
+    /* margin-left:100px; 
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
+    transition: 0.3s;
     width: 100%;
-    /* padding: 12px 20px; */
-    /* margin: 8px 0;
-    box-sizing: border-box;   */
-
+    
+  }
+  
+  .st-detail:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .st-container {
+    padding: 2px 16px;
+  }
+  p{
+    text-align:center;
+  }
 
 
 .input-text:focus{
     outline-color: rgb(105, 100, 100);
 }
 
- /* .login-btn{
-    border: none;
-    background-color: rgb(68, 95, 250);
-    height: 1.8rem;
-    border-radius: 0.25em;
-    cursor: pointer;
- } */
+
 

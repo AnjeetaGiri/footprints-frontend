@@ -19,11 +19,11 @@ const FindUserDetails = () => {
   });
 
   const handleInputs = (e) => {
-    console.log(e);
+    //console.log(e);
     const { name, value } = e.target;
     setUser({ ...user, [name]: value });
 
-    console.log(user.userID);
+    //console.log(user.userID);
   };
 
   const [students, setStudents] = useState([]);
@@ -38,7 +38,7 @@ const FindUserDetails = () => {
     });
     const data = await res.json();
     if (data) {
-      console.log(data);
+    
       setStudents(data.data);
 
       getStudent();
@@ -50,7 +50,7 @@ const FindUserDetails = () => {
   const getStudent = () => {
     students.map((student) => {
       if (student.user_id == user.userID) {
-        console.log(student.name);
+        //console.log(student.name);
         const newuser = {
           userID: user.userID,
           name: student.name,
@@ -63,22 +63,16 @@ const FindUserDetails = () => {
         };
 
         setUser(newuser);
-        console.log(user.name);
-        console.log(user.branch);
-        console.log(user.hostel);
+        // console.log(user.name);
+        // console.log(user.branch);
+        // console.log(user.hostel);
       }
     });
 
-    console.log(user.userID);
+    //console.log(user.userID);
   };
   return (
-    <>
-      {/* <div>
-      {students.map((student) => (
-        <div key={student.id}>{student.name}</div>
-      ))}
-    </div> */}
-
+      <>
       <div className="user-detail">
         <h2>Find User Details</h2>
 
@@ -97,11 +91,10 @@ const FindUserDetails = () => {
         <Button className={styles.button} onClick={apiGet}>
           PROCEED
         </Button>
-
-        <div className="st_detail">
-          <h4 className="heading-4">Details of Student: </h4>
-          <table className="UserDetailTable">
-            <thead>
+        <div className="st-detail">
+          {/* <h4 className="heading-4">Details of Student: </h4> */}
+          {/* <table className="UserDetailTable"> */}
+            {/* <thead>
               <tr>
                 <th>User ID</th>
                 <th>Email</th>
@@ -110,8 +103,8 @@ const FindUserDetails = () => {
                 <th>Hostel</th>
                 <th>Room No.</th>
               </tr>
-            </thead>
-            <tbody>
+            </thead> */}
+            {/* <tbody>
               <tr>
                 <td data-label="Name">{user.name}</td>
                 <td data-label="Email">{user.email}</td>
@@ -121,14 +114,26 @@ const FindUserDetails = () => {
                 <td data-label="Room_No">{user.room_no}</td>
               </tr>
             </tbody>
-          </table>
+          </table> */}
+          {/* <img src="img_avatar.png" alt="Avatar" style="width:100%"/> */}
+          <div className="st-container">
+              <div>
+              <h4><b>{user.name}</b></h4> 
+              <p>{user.email}</p>
+              <p>{user.branch}</p>
+              <p>{user.session}</p>
+              <p>{user.hostel}</p>
+              <p>{user.room_no}</p>
+              </div>
+              
+          </div>
         </div>
         {/* <div className="btn">
        <button class="btn" type="button" onClick={Popup}>Submit</button>
        </div> */}
       </div>
-    </>
-  );
+      </>
+    );
 };
 
 export default FindUserDetails;

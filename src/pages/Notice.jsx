@@ -19,6 +19,7 @@ const Notice = () => {
   // };
   const [selectedDate, setSelectedDate] = useState(null);
   const [toggleState, setToggleState] = useState(1);
+  const [message,setMessage]=useState(" ")
 
   const toggleTab = (index) => {
     setToggleState(index);
@@ -34,6 +35,7 @@ const Notice = () => {
     );
   }
   return (
+    <form>
     <div className="user-detail">
       {/* <h2>Send Notice:</h2> */}
       <div className="container">
@@ -118,52 +120,8 @@ const Notice = () => {
           </button>
         </div>
       </div>
-
-      {/* <DemoItem
-        label={'"year"", "month", "day", "hours", "minutes" and "seconds"'}
-      >
-        
-
-      {/* </div>
-      </div> */}
-      {/* <div>
-        <div class="row">
-          <div class="col">
-          </div>
-          <div class="col">
-          </div>
-        </div>
-        <label for="select year">
-          <b>Select Year:</b>
-        </label>
-        <br />
-        <input type="checkbox" /> I<br />
-        <input type="checkbox" /> II
-        <br />
-        <input type="checkbox" /> III
-        <br />
-        <input type="checkbox" /> IV <br />
-        <label for="select year">
-          <b>Select Hostel:</b>
-        </label>
-        <br />
-        <input type="checkbox" /> BH-1
-        <input type="checkbox" /> BH-2
-        <input type="checkbox" /> BH-3
-        <input type="checkbox" /> GH
-      </div>
-      <label>
-        <input className="notice" type="text" placeholder="Enter a message" />
-        <br />
-      </label>
-      <br /> */}
-      {/* <Button className={styles.button}>SEND</Button>
-      <br />
-      <Button className={styles.button}>SCHEDULE</Button>
-      {/* <input className="datetime" type="datetime-local" id="schedule"/> */}
-
-      {/* </DateTimePickerComponent> */}
     </div>
+    </form>
   );
 };
 
