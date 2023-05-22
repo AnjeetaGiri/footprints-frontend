@@ -4,31 +4,29 @@ import "./AddNewUser.css";
 import styles from "../myStyles.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 const AddNewUser = () => {
-  const ClickHandler = () => {};
-  const [user, setUser] = useState({
-    name: "",
-    rollNo: "",
-    mobileNo: "",
-    email: "",
-    branch: "",
-    session: "",
-    hostel: "",
-    roomNo: "",
-    role: "",
+  const [inputs, setInputs] = useState({
   });
-  const handleInputs = (e) => {
-    console.log(e);
-    const { name, value } = e.target;
-    setUser({ ...user, [name]: value });
+  const handleChange = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setInputs(values => ({...values, [name]: value}))
   };
-  // const PostData = async(e)=>{
-  //     e.preventDefault();
-  //     const{ name, rollNo, mobileNo, email, branch, session, hostel, roomNo, role }=user;
-  // }
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(inputs);
+    // const { name, value } = e.target;
+    // setUser({ ...user, [name]: value });
+  };
+
+
+  //-------------Till Here--------------------
+
+
+
   return (
     <div className="wrapper rounded bg-white">
       <div className="box">
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="h3">Add New User</div>
 
           <div className="row">
@@ -39,9 +37,9 @@ const AddNewUser = () => {
               <input
                 className="input-AddNewUsertype"
                 type="text"
-                name="name"
-                value={user.name}
-                onChange={handleInputs}
+                name="username"
+                value={inputs.username || ""}
+                onChange={handleChange}
                 required
               />
             </div>
@@ -56,8 +54,8 @@ const AddNewUser = () => {
                 type="number"
                 className="input-AddNewUsertype"
                 name="rollNo"
-                value={user.rollNo}
-                onChange={handleInputs}
+                value={inputs.rollNo || ""}
+                onChange={handleChange}
                 required
               />
             </div>
@@ -72,8 +70,8 @@ const AddNewUser = () => {
                 type="number"
                 className="input-AddNewUsertype"
                 name="mobileNo"
-                value={user.mobileNo}
-                onChange={handleInputs}
+                value={inputs.mobileNo || ""}
+                onChange={handleChange}
                 required
               />
             </div>
@@ -87,8 +85,8 @@ const AddNewUser = () => {
                 className="input-AddNewUsertype"
                 type="email"
                 name="email"
-                value={user.email}
-                onChange={handleInputs}
+                value={inputs.email || ""}
+                onChange={handleChange}
                 required
               />
             </div>
@@ -102,8 +100,8 @@ const AddNewUser = () => {
                 className="input-AddNewUsertype"
                 type="text"
                 name="branch"
-                value={user.branch}
-                onChange={handleInputs}
+                value={inputs.branch || ""}
+                onChange={handleChange}
                 required
               />
             </div>
@@ -117,8 +115,8 @@ const AddNewUser = () => {
                 className="input-AddNewUsertype"
                 type="text"
                 name="session"
-                value={user.session}
-                onChange={handleInputs}
+                value={inputs.session || ""}
+                onChange={handleChange}
                 required
               />
             </div>
@@ -132,8 +130,8 @@ const AddNewUser = () => {
                 className="input-AddNewUsertype"
                 type="text"
                 name="hostel"
-                value={user.hostel}
-                onChange={handleInputs}
+                value={inputs.hostel || ""}
+                onChange={handleChange}
                 required
               />
             </div>
@@ -146,9 +144,9 @@ const AddNewUser = () => {
               <input
                 className="input-AddNewUsertype"
                 type="text"
-                name="roomNo."
-                value={user.roomNo}
-                onChange={handleInputs}
+                name="roomNo"
+                value={inputs.roomNo || ""}
+                onChange={handleChange}
                 required
               />
             </div>
@@ -162,14 +160,15 @@ const AddNewUser = () => {
                 className="input-AddNewUsertype"
                 type="text"
                 name="role"
-                value={user.role}
-                onChange={handleInputs}
+                value={inputs.role || ""}
+                onChange={handleChange}
                 required
               />
             </div>
-            <Button className={styles.button} onClick={ClickHandler}>
+            <input type="submit" />
+            {/* <Button className={styles.button}>
               Submit
-            </Button>
+            </Button> */}
           </div>
         </form>
       </div>

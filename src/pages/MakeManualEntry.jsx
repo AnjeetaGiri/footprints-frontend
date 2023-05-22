@@ -1,21 +1,19 @@
 import React from "react";
-import { useState,setState,useEffect} from "react";
+import { useState, setState, useEffect } from "react";
 import ManualData from "../components/ManualData";
 import "./MakeManualEntry.css";
 import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "../myStyles.module.css";
 import ManualEntryTable from "./ManualEntryTable.jsx";
-import "./ManualEntryTable.css";
 
 
 const MakeManualEntry = () => {
- 
-  const [content, setContent]=useState(<></>); 
-   
-const handleClick =event =>{
-  setContent(<ManualEntryTable/>);
-}
+  const [content, setContent] = useState(<></>);
+
+  const handleClick = (event) => {
+    setContent(<ManualEntryTable />);
+  };
 
   const [enterUserId, setEnterUserId] = useState("");
   const uIdChangeHandelar = (event) => {
@@ -30,7 +28,7 @@ const handleClick =event =>{
     console.log(entryData);
     setEnterUserId("");
   };
- 
+
   return (
     <div onSubmit={submitHandler} className="manual-entry">
       <div>
@@ -47,13 +45,26 @@ const handleClick =event =>{
         <br />
       </label>
       <br />
-      <Button className={styles.button} onClick={handleClick}>SUBMIT</Button>
-    
-<div className="detail">
-  {content}
-</div>
+      <Button className={styles.button} onClick={handleClick}>
+        SUBMIT
+      </Button>
+
+      <div className="detail">{content}</div>
     </div>
   );
 };
 
 export default MakeManualEntry;
+
+
+
+
+
+
+
+
+
+
+
+
+

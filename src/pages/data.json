@@ -1,0 +1,46 @@
+[{
+    "_id": "642bcb31397934abe342a126",
+    "user_id": 1908410100054,
+    "name": "Saumya Tripathi",
+    "email": "ishasaumyatripathi0@gmail.com",
+    "Mob_no": 9118011060,
+    "branch": "CSE",
+    "session": "2019-2023",
+    "hostel": "GH",
+    "room_no": "G-27",
+    "__v": 0
+},
+{
+    "_id": "642bd07dce483bf0b827c22d",
+    "user_id": 1908410100011,
+    "name": "Anjeeta Giri",
+    "email": "girianjeeta@gmail.com",
+    "Mob_no": 9398745620,
+    "branch": "CSE",
+    "session": "2019-2023",
+    "hostel": "GH",
+    "room_no": "G-4",
+    "__v": 0
+},
+{
+    "_id": "642bd220ce483bf0b827c235",
+    "user_id": 1908410100005,
+    "name": "Akarshit Gupta",
+    "email": "akarshitgupta2920@gmail.com",
+    "Mob_no": 6393645895,
+    "branch": "CSE",
+    "session": "2019-2023",
+    "hostel": "BH",
+    "room_no": "F-14",
+    "__v": 0
+},
+{
+    "user_id": 1908410100001,
+     "name": "Abhimanyu",
+     "email": "abhee_up0@gmail.com",
+     "Mob_no": 8321084340,
+     "branch": "CSE",
+     "session": "2019-2023",
+     "hostel": "BH- 2",
+     "room_no": "F-27"
+}]

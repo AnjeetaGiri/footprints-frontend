@@ -1,20 +1,43 @@
 .table-box{
-    overflow-x:auto;
+    /* overflow-x:auto; */
+    width:100%;
+    background-color: rgba(38, 42, 255, 0.341);
 }
 table{
     
     border: 1px solid;
-    width:220%;
+    width:100%;
     margin-top:40px;
 }
-th,td{
+th{
+    text-align:center;
     border: 1.5px solid;
     width:30%;
-
+    background-color: rgb(0, 7, 61);
+    color:rgba(255, 255, 255, 0.851);
+    font-size:15px;
+    padding:10px;
+}
+td{
+    text-align:center;
+    border: 1.5px solid;
+    width:30%;
+    background-color: rgba(19, 22, 220, 0.341);
+}
+.table-box tbody td button{
+    padding:5px;
+    background-color: rgb(154, 6, 6);
+    border:1px solid black;
+    color:white;
+    border-radius: 3px;
+    font-size:medium;
 }
 @media screen and (max-width: 600px) {
     table{
         margin:0;
+    }
+    .table-box{
+        overflow-x: auto;
     }
     
   }

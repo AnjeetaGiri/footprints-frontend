@@ -22,9 +22,11 @@
     cursor: pointer;
 }
 @media screen and (max-width: 600px) {
-    .manual-entry{
-      width: 100%;
+    .manual-entry,.input-text{
+      /* width: 100%; */
       margin-top: 0;
+      margin-left:3px;
+      padding:0;
     }
     .box{
       margin:0;

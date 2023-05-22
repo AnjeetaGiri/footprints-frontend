@@ -12,7 +12,8 @@
 
 .user-detail{
     font-size: 25px;
-    padding: 30px 70px;
+    padding: 30px 50px;
+    /* padding:30px 70px; */
     justify-content: space-around;
     flex-direction: row;
     width: 100%;
@@ -20,6 +21,13 @@
     margin: 8px 0;
     box-sizing: border-box;
     height: 2rem;
+}
+.heading-4{
+    margin-top:20px;
+}
+td data-label{
+    text-align:center;
+    font-size:medium;
 }
 
 /* .btn {
@@ -49,6 +57,15 @@
     margin: 12px 0;
     box-sizing: border-box;   
 }
+.st_detail{
+  text-align:left;
+
+}
+/* .st_name{
+    border:2px solid black;
+    background-color:red;
+} */
+
 /* .form{
     width: 100%;
     /* padding: 12px 20px; */

@@ -9,7 +9,8 @@
     justify-content: space-around;
     flex-direction: row;
     margin-top:50px;
-    margin-left:180px;
+    margin-left:150px; 
+    /* margin-left://180px; */
 }
 .datetime{
     width:100px;
@@ -212,6 +213,9 @@
   }
   .btn-notice{
     margin-top:3px;
+    margin-right:3px;
+    padding:0px;
+    max-width: fit-content;
   }
   @media screen and (max-width: 600px) {
     .notice,.container,.main,.form-control,#my-box,.label-notice{
@@ -223,8 +227,7 @@
         margin:0;
     }
     .user-detail{
-      margin:15px;
-      padding:0;
+      margin:10px;
     }
     b,button.tabs,.bloc-tabs,button.tabs active-tabs,.tabs,div.content.active-content,div.year,div.branch,.notice{
       margin:0;
@@ -237,6 +240,8 @@
     .btn-notice{
       margin:0;
       padding:0;
+      max-height: fit-content;
+      max-width: fit-content;
     }
   }
   

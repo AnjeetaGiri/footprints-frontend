@@ -4,32 +4,54 @@
     padding: 8px;
     /* gap: 25%;
     font-size: 18px; */
+    /* gap: 25%; */
+    font-size: 18px;
     text-decoration-line: calc(15);
 
         /* grid-gap: 25%; */
-    justify-content: space-around;
+    /* grid-gap: 25%; */
+    /* justify-content: space-around; */
     /* gap: 25%; */
     /* font-size: 18px; */
+    gap: 25%;
+    font-size: 18px;
     
     color: white;
     background-color: rgb(52, 22, 80);
     width:100%;
     height:100%;
    }
-   
+   .title_rec{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left:2px;
+   }
    .logo{
-    font-size: 20PX;
+    /* font-size: 20PX;
     color: white;
-    text-align: center;
+    text-align: center; */
+    font-size: 20px;
+    padding-left: 20px;
     /* padding: 5px 0; */
+    /* padding: 5px 0; */
+   }
     
-    }
    .bars{
     cursor: pointer;
-   } 
+    align-items:left;
+    display: flex-start;
+   }
+   img{
+        width:50px;
+        height:40px;
+        align-self: start;
+    }
+
 @media (max-width:600px) {
     .logo{
         font-size:13px;
+        /* width:100%; */
         width: 70%;
     }
     

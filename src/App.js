@@ -1,5 +1,5 @@
     import React,{useState} from 'react';
-    import Axios from "axios";
+    // import Axios from "axios";
     import './App.css';
     import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'; 
     import Home from './pages/Home';
@@ -11,6 +11,7 @@
     import SendNotificationToUsers from './pages/SendNotificationToUsers';
     import LogOut from './pages/LogOut';
     import Sidebar from './components/Sidebar';
+    import Home_Table from './pages/Home_Table';
     import Toolbar from './components/Logo';
     import 'bootstrap/dist/css/bootstrap.min.css';
     import {Button} from 'react-bootstrap/Button';
@@ -36,7 +37,7 @@
         <Toolbar openSidebar={toggle}/>
           <Sidebar sidebar={sidebar}>
             <Routes>
-              <Route path='/' element={<Home/>} />        
+              <Route path='/' element={<Home/>} />      
               <Route path='/FindUserDetails' element={<FindUserDetails/>} />
               <Route path='/MakeManualEntry' element={<MakeManualEntry/>} />
               <Route path='/AddNewUser' element={<AddNewUser/>} />

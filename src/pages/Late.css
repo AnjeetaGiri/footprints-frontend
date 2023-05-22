@@ -4,17 +4,19 @@
 table{
     overflow-x:auto;
     border: 1px solid;
-    width:220%;
+    width:100%;
     margin-top:40px;
     max-height:fit-content;
     border-collapse: collapse;
 }
 thead{
-    background-color: brown;
+    background-color:rgb(0, 7, 61);
+    color:rgba(255, 255, 255, 0.601);
 }
 th,td{
     border: 1.5px solid;
     width:30%;
+    background-color: rgba(19, 22, 220, 0.341);
 
 }
 @media(max-width:235px){
