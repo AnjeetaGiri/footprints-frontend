@@ -7,7 +7,7 @@ const Register = () => {
         name:"",
         email:"",
         password:"",
-        reEnterPassword:""
+        role:""
       })
       const handleChange=e=>{
         const { name,value }=e.target

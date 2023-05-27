@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import './Late.css';
 
 const data=[
-    {user_id:"1908410100005",place:"Churk",outTime:'10.35 AM',inTime:'3:00 PM',inOutStat:'In',purpose:"Shopping"}
+    {user_id:"1908410100005",place:"Churk",outTime:'10.35 AM',inTime:'',inOutStat:'Out',purpose:"Shopping",changes:""}
     // {rollno:"1908410100005",date:"15/05/2023",doneBy:"Akarshit",place:"Robertsganj",out:'10.35 AM',changes:""},
     // {rollno:"1908410100001",date:"15/05/2023",doneBy:"Abhimanyu",place:"Home",out:'8.45 AM',changes:""},
     // {rollno:"1908410100011",date:"15/05/2023",doneBy:"Anjeeta",place:"Churk",out:'7.54 AM',changes:""},
@@ -34,7 +34,7 @@ export default function Late() {
                                 <td>{value.inOutStat}</td>
                                 <td>{value.purpose}</td>
                                 {/* <td>{value.changes}</td> */}
-                                {/* <td><button onClick={toggle} className={'toggle--button'+(state?'toggle--in':'')}> {state?'in':'out'}</button></td> */}
+                                <td><button onClick={toggle} className={'toggle--button'+(state?'toggle--in':'')}> {state?'out':'in'}</button></td>
                             </tr>)
                     })}
             </tbody>

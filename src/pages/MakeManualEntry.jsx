@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, setState, useEffect } from "react";
+import { useState } from "react";
 import ManualData from "../components/ManualData";
 import "./MakeManualEntry.css";
 import { Button } from "react-bootstrap";

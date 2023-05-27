@@ -37,11 +37,6 @@ const routes =[
       name: '30 Days logs Viewer',
       icon: <FaStreetView/>,
     },
-    // {
-    //   path:'/SendNotificationToUsers',
-    //   name: 'Send Notification to users',
-    //   icon: <BiMessageRoundedDots/>,
-    // },
     {
       name: 'Log Out',
       icon: <BiLogOut/>,

@@ -12,7 +12,6 @@
     import Sidebar from './components/Sidebar';
     import Toolbar from './components/Logo';
     import 'bootstrap/dist/css/bootstrap.min.css';
-    import {Button} from 'react-bootstrap/Button';
 
     
 

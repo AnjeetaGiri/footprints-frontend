@@ -3,25 +3,24 @@ import { Button } from "react-bootstrap";
 import "./Notice.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "../myStyles.module.css";
-// import { DateTimePickerComponent } from "@syncfusion/ej2-react-calendars";
-// import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-// import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-// import { DatePicker } from "@mui/x-date-pickers";
+
 
 const Notice = () => {
-  // const dateValue: Date=new Date("30/03/2023 10:30 AM");
-  // const minDate: Date=new Date("")
-  // const state={
-  //   value:"Write your message here"
-  // };
-  // const handleChange=e=>{
-  //   this.setState({value:e.target.value})
-  // };
   const [selectedDate, setSelectedDate] = useState(null);
   const [toggleState, setToggleState] = useState(1);
-  const [message,setMessage]=useState(" ")
+  const [message,setMessage]=useState(" ");
+  // const fetchData=()=>{
+  //   const selectYearI="https://footprints-api.onrender.com/notice/I";
+  //   const selectYearII="https://footprints-api.onrender.com/notice/II";
+  //   const selectYearIII="https://footprints-api.onrender.com/notice/III";
+  //   const selectYearIV="https://footprints-api.onrender.com/notice/IV";
+  //   const selectHostelBH1="https://footprints-api.onrender.com/notice/BH-1"
+  //   const selectHostelBH2="https://footprints-api.onrender.com/notice/BH-2";
+  //   const selectHostelGH="https://footprints-api.onrender.com/notice/gH";
+  // }
 
-  const toggleTab = (index) => {
+  const toggleTab = (e,index) => {
+    e.preventDefault();
     setToggleState(index);
   };
   function DatePick() {
@@ -37,18 +36,17 @@ const Notice = () => {
   return (
     <form>
     <div className="user-detail">
-      {/* <h2>Send Notice:</h2> */}
       <div className="container">
         <div className="bloc-tabs">
           <button
             className={toggleState === 1 ? "tabs active-tabs" : "tabs"}
-            onClick={() => toggleTab(1)}
+            onClick={(e) => toggleTab(e,1)}
           >
             <b>Select Year & Branch</b>
           </button>
           <button
             className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
-            onClick={() => toggleTab(2)}
+            onClick={(e) => toggleTab(e,2)}
           >
             <b>Select Hostel</b>
           </button>
