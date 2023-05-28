@@ -36,9 +36,7 @@ const FindUserDetails = () => {
     });
     const data = await res.json();
     if (data) {
-    
       setStudents(data.data);
-
       getStudent();
     } 
     else {
@@ -47,8 +45,11 @@ const FindUserDetails = () => {
   };
   // apiGet();
   const getStudent = () => {
+   
     students.map((student) => {
-      if (student.user_id === user.userID) {
+    
+      if (student.user_id == user.userID) {
+
         const newuser = {
           userID: user.userID,
           name: student.name,
@@ -59,7 +60,6 @@ const FindUserDetails = () => {
           hostel: student.hostel,
           room_no: student.room_no,
         };
-
         setUser(newuser);
       }
     });
@@ -67,8 +67,8 @@ const FindUserDetails = () => {
   return (
       <>
       <div className="user-detail">
+      <img className="user-image" src="https://e7.pngegg.com/pngimages/178/595/png-clipart-user-profile-computer-icons-login-user-avatars-monochrome-black-thumbnail.png" alt="user-icon"/>
         <h2>Find User Details</h2>
-
         <label>
           <input
             className="input-text"
@@ -94,9 +94,8 @@ const FindUserDetails = () => {
               <p>{user.session}</p>
               <p>{user.hostel}</p>
               <p>{user.room_no}</p>
-              </div>
-              
-          </div>
+          </div>        
+        </div>
         </div>
       </div>
       </>
