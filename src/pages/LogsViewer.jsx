@@ -1,9 +1,7 @@
 import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useState } from "react";
-import styles from "../myStyles.module.css";
 import './LogsViewer.css';
-import Late from "./Late.jsx";
 
 const LogsViewer = () => {
   const [user, setUser] = useState({
@@ -22,18 +20,13 @@ const LogsViewer = () => {
     console.log(user.userID);
   };
   const [students, setStudents] = useState([]);
-  // const renderTable = () => {
-  //   const [table, setTable] = useState("");
-  // };
-//   console.log(user.userID);
-// };
 
 const apiGet= async(e)=>{
  e.preventDefault();
 const res= await fetch("/userlogs",{
   method:'GET',
   headers: {
-              "Content-Type": "application/json"
+            "Content-Type": "application/json"
         },
  });
  const data= await res.json();
@@ -72,34 +65,35 @@ const res= await fetch("/userlogs",{
 
   return (
     <>
-    <div className="user-detail">
+    <div className="LogsViewer-container">
+      <img className="logs-image" src="https://cdn-icons-png.flaticon.com/512/2620/2620995.png"
+      alt="Log-image"/>
       <div>
-        <h2>30 DAYS LOGS</h2>
+        <h5 className="logs-heading">30 DAYS LOGS</h5>
       </div>
       <label>
         <input
-          className="input-text"
+          className="input-logsViewer"
           type="text"
           name="userID"
           value={user.userID}
           onChange={handleInputs}
-          placeholder="Enter userId"
+          placeholder="Enter UserId"
         />
         <br />
       </label>
       <br />
-      <Button className={styles.button} onClick={apiGet}>
+      <button className="logsViewer-btn" onClick={apiGet}>
         FIND
-      </Button>
+      </button>
+      </div>
       <div className="st-logs">
           {/* <h4 className="heading-4">Details of Student: </h4> */}
-          <div className="stLog-container">
-              <h4>{user.done_by}</h4> 
-              <p>{user.inTime}</p>
-              <p>{user.Status}</p>
+          {/* <div className="stLog-container"> */}
+              <h4>{user.done_by}</h4>
+              <p>{user.inTime}</p><br/>
+              <p>{user.Status}</p><br/>
               <p>{user.purpose}</p>
-              
-          </div>
         </div>
           {/* <table className="UserDetailTable"> */}
             {/* <thead>
@@ -126,7 +120,7 @@ const res= await fetch("/userlogs",{
         {/* <div className="btn">
        <button class="btn" type="button" onClick={Popup}>Submit</button>
        </div> */}
-      </div>
+      
     </>
   );
 };
