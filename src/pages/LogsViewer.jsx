@@ -59,7 +59,6 @@ const res= await fetch("/userlogs",{
     console.log(user.Status);
     }
   });
-
   console.log(user.userID);
  }
 

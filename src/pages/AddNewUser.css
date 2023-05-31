@@ -64,7 +64,7 @@ input[type=text], select {
 
 .input-AddNewUsertype, select {
   width: 100%;
-  padding: 12px;
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
   resize: vertical;
@@ -81,6 +81,7 @@ input[type=text], select {
   padding: 20px;
   margin:25px 280px;
   max-height:fit-content;
+  width:30%;
 }
 
 .col-25 {
@@ -108,8 +109,10 @@ input[type=text], select {
   padding: 3px 3px;
   margin-top: 12px;
   margin-bottom:5px;
+  font-weight:500;
   width: 100%;
-  background-color: rgb(143, 4, 4);
+  padding:5px;
+  background-color: #1877f2;
   color: whitesmoke;
   border-radius: 5px;
   border: 1px solid black;

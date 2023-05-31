@@ -1,24 +1,8 @@
 import React, { useState } from "react";
 import "./AddNewUser.css";
 import Axios from "axios";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 const AddNewUser = () => {
-
-  // const Popup=()=>{
-  //   return(
-  //     <div className="Popup-container">
-  //     <div className="popup">
-  //     <img src="https://img.freepik.com/premium-vector/green-check-mark-icon-symbol-logo-circle-tick-symbol-green-color-vector-illustration_685751-503.jpg?w=740" alt="tick_picture"/>
-  //     <h2>Thank You!</h2>
-  //     <p>User has been successfully added!</p>
-  //     <button type="button">OK</button>
-  //   </div>
-  // </div>
-  //   )
-
-     
-  // }
 
   const [message,setMessage]=useState("");
   const [data,setData]=useState({
@@ -30,9 +14,7 @@ const AddNewUser = () => {
     session:"",
     hostel:"",
     room_no: ""
-
   })
-
   const url="/students";
   function submit(e){
     e.preventDefault();
@@ -48,9 +30,7 @@ const AddNewUser = () => {
     })
     .then(res=>{
       console.log(res.data);
-     // setMessage(res.data.status);
-      if (res.status === 201) {
-               
+      if (res.status === 201) { 
                const newdata={
                 user_id:"",
                 name: "", 
@@ -60,11 +40,10 @@ const AddNewUser = () => {
                 session:"",
                 hostel:"",
                 room_no: ""
-            
               }  
               setData(newdata);  
-               setMessage("User created successfully");
-           }
+              setMessage("User created successfully");
+            }
     }).catch(err=>{
       console.log(err);
     })
@@ -78,7 +57,6 @@ const AddNewUser = () => {
   return (
     <div className="wrapper rounded bg-white">
       <div className="box">
-        {/* <form onSubmit={handleSubmit}> */}
         <form onSubmit={(e)=>submit(e)}>
           <div className="h3">Add New User</div>
 
@@ -218,3 +196,31 @@ const AddNewUser = () => {
 };
 
 export default AddNewUser;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // const Popup=()=>{
+  //   return(
+  //     <div className="Popup-container">
+  //     <div className="popup">
+  //     <img src="https://img.freepik.com/premium-vector/green-check-mark-icon-symbol-logo-circle-tick-symbol-green-color-vector-illustration_685751-503.jpg?w=740" alt="tick_picture"/>
+  //     <h2>Thank You!</h2>
+  //     <p>User has been successfully added!</p>
+  //     <button type="button">OK</button>
+  //   </div>
+  // </div>
+  //   )
+
+     
+  // }

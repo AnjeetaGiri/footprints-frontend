@@ -1,0 +1,16 @@
+.ManualEntry-Container{
+    Border:2px solid black;
+    margin:auto;
+    /* float:right; */
+    margin-bottom:200px;
+    position:absolute;
+    top:110px;
+    right:50px;
+    transition: 0.3s;
+    width:100%;
+    padding: 2px 16px;
+    width:40%;
+    /* margin:50px; */
+    /* margin-right:px; */
+    height:350px;   
+}

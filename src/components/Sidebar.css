@@ -9,6 +9,9 @@
   .main-container{
     display: flex;
    }
+   .main-content{
+    width:100vw;
+   }
   
    .title{
     font-size: 30px;

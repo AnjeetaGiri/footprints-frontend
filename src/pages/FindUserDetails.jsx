@@ -1,9 +1,5 @@
 import React, { useState } from "react";
 import "./FindUserDetails.css";
-import "./data.json";
-import { Button } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
-import styles from "../myStyles.module.css";
 
 const FindUserDetails = () => {
   const [user, setUser] = useState({
@@ -20,8 +16,6 @@ const FindUserDetails = () => {
   const handleInputs = (e) => {
     const { name, value } = e.target;
     setUser({ ...user, [name]: value });
-
-    //console.log(user.userID);
   };
 
   const [students, setStudents] = useState([]);
@@ -66,37 +60,34 @@ const FindUserDetails = () => {
   };
   return (
       <>
-      <div className="user-detail">
-      <img className="user-image" src="https://e7.pngegg.com/pngimages/178/595/png-clipart-user-profile-computer-icons-login-user-avatars-monochrome-black-thumbnail.png" alt="user-icon"/>
-        <h2>Find User Details</h2>
+      <div className="finduser">
+      <div className="FindUser-Container">
+      <img className="user-image" src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?size=626&ext=jpg&ga=GA1.2.118633946.1684948342&semt=ais" alt="user-icon"/>
+      <h5 className="FindUser-Heading">Find User Details</h5>
+        {/* <h2>Find User Details</h2> */}
         <label>
           <input
-            className="input-text"
+            className="input-FindUser"
             type="text"
             name="userID"
             value={user.userID}
             onChange={handleInputs}
-            placeholder="Enter userId"
+            placeholder="Enter UserId"
           />
-          <br />
         </label>
         <br />
-        <Button className={styles.button} onClick={apiGet}>
-          PROCEED
-        </Button>
+        <button className="FindDetails-btn" onClick={apiGet}>
+          FIND
+        </button>
+        </div>
         <div className="st-detail">
-                   
-          <div className="st-container">
-              <div>
               <h4><b>{user.name}</b></h4> 
               <p>{user.email}</p>
               <p>{user.branch}</p>
               <p>{user.session}</p>
               <p>{user.hostel}</p>
-              <p>{user.room_no}</p>
-          </div>        
-        </div>
-        </div>
+              <p>{user.room_no}</p>      
+      </div>
       </div>
       </>
     );

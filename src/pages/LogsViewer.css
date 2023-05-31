@@ -1,24 +1,105 @@
+.LogsViewer-container{
+  /* font-size: 25px;
+  padding: 30px 50px; */
+  /* padding:30px 70px; */
+  /* justify-content: space-around;
+  flex-direction: row; */
+  /* width: 100%; */
+  /* padding: 12px 20px; */
+  /* margin: 8px 0;
+  box-sizing: border-box;
+  height: 2rem; */
+  width:30%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    font-size: 25px;
+    padding: 20px 30px;
+    margin-left:70px;
+    margin-top:60px;
+    height:50%;
+}
+.LogsViewer-container:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.logs-heading{
+  margin-top:5px;
+  margin-bottom:10px;
+  text-align:center;
+}
+.logs-image{
+  margin-left:80px;
+  width:50%;
+  height:100px;
+}
+.input-logsViewer{
+  border: 1px solid black;
+    background-color: var(--bs-body-bg);
+    height:1.3rem;
+    border-radius:0.5rem;
+    width: 100%;
+    font-size:medium;
+    padding: 15px 20px;
+    margin: 12px 0;
+    margin-left:45px;
+    box-sizing: border-box;
+}
+.logsViewer-btn{
+  padding: 2px 2px;
+  font-size: medium;
+  font-weight: 500;
+  margin-left:50px;
+  margin-top: 12px;
+  margin-bottom:5px;
+  width: 80%;
+  background-color: #1877f2;
+  color: whitesmoke;
+  border-radius: 5px;
+  border: 1px solid black;
+  outline: 0;
+  box-shadow: 0px 2px 1px lightgray;
+  text-transform: uppercase;
+}
+
 .st-logs {
-    display: flex;
+    /* display: flex;
     margin-top:50px;
-    margin-bottom:50px;
+    margin-bottom:50px; */
     /* margin-left:100px; */
     /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
-    transition: 0.3s;
+    /* transition: 0.3s;
     width: 100%;
-    text-align: center;
-    
+    text-align: center; */
+    /* display:flex; */
+    margin:auto;
+    /* float:right; */
+    margin-bottom:200px;
+    position:absolute;
+    top:110px;
+    right:50px;
+    transition: 0.3s;
+    width:100%;
+    padding: 2px 16px;
+    width:40%;
+    /* margin:50px; */
+    /* margin-right:px; */
+    height:350px;
+    /* border:2px solid black; */
   }
   
   .st-logs:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
   
-  .stLog-container {
+  /* .stLog-container {
     padding: 2px 16px;
     text-align: center;
     /* border:2px solid black; */
+  .st-logs p{
+    text-align:center;
+    font-weight:600;
+    font-size:larger;
   }
-  p{
+  .st-logs h4{
+    margin-top:40px;
     text-align:center;
   }

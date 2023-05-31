@@ -1,6 +1,6 @@
 import React from 'react';
 // import {motion} from 'framer-motion';
-import {AnimatePresence, motion} from "framer-motion/dist/framer-motion";
+import {motion} from "framer-motion/dist/framer-motion";
 import './Sidebar.css';
 import { FaHome, FaUserEdit, FaUserFriends, FaStreetView} from 'react-icons/fa'
 import { BiUserPlus, BiBookmarkAlt, BiLogOut} from 'react-icons/bi'
@@ -37,14 +37,12 @@ const routes =[
       name: '30 Days logs Viewer',
       icon: <FaStreetView/>,
     },
-    {
+    { 
       name: 'Log Out',
       icon: <BiLogOut/>,
     },
 ];
-const Sidebar = ({sidebar,children}) => {
-  
-    
+const Sidebar = ({sidebar,children}) => {  
   return (
     <div className="main-container"> 
       
@@ -65,7 +63,7 @@ const Sidebar = ({sidebar,children}) => {
           ))}
       </section>} 
       </motion.div>  
-      <main>{children}</main>
+      <main className='main-content'>{children}</main>
     </div>
   );
 };

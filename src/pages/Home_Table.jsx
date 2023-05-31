@@ -3,8 +3,8 @@ import "./Home_Table.css";
 // import fakeData from './Mock-data.json'
 const Home_Table = () => {
   const[admin,setAdmin]=useState({
-    name:"Deepak Sigroha",
-    role:"Warden",
+    name:"",
+    role:"",
     // hostel:"BH-2"
   });
   const data=[

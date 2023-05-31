@@ -7,25 +7,14 @@
     import AddNewUser from './pages/AddNewUser';
     import Notice from './pages/Notice';
     import LogsViewer from './pages/LogsViewer';
-    import SendNotificationToUsers from './pages/SendNotificationToUsers';
+    import privateroutes from './components/privateroutes';
     import LogOut from './pages/LogOut';
     import Sidebar from './components/Sidebar';
     import Toolbar from './components/Logo';
     import 'bootstrap/dist/css/bootstrap.min.css';
 
-    
-
       function App () {
-        // const[data,setData]=useState("");
-        // const getData=async()=>{
-        //   const response=await Axios.get("http://localhost:5000/getData");
-        //   setData(response.data);
-        // }
-        // useEffect(()=>{
-        //   getData()
-        // },[]);
-        const[sidebar, setSidebar] = useState(false);
-       
+        const[sidebar, setSidebar] = useState(false);  
         const toggle = ()=> {setSidebar(!sidebar)
        };
       return (
@@ -34,20 +23,18 @@
         <Toolbar openSidebar={toggle}/>
           <Sidebar sidebar={sidebar}>
             <Routes>
-              <Route path='/' element={<Home/>} />      
+              <Route path='/' element={<Home/>} />
               <Route path='/FindUserDetails' element={<FindUserDetails/>} />
               <Route path='/MakeManualEntry' element={<MakeManualEntry/>} />
               <Route path='/AddNewUser' element={<AddNewUser/>} />
               <Route path='/Notice' element={<Notice/>} />
               <Route path='/LogsViewer' element={<LogsViewer/>}/>
-              <Route path='/SendNotificationToUsers' element={<SendNotificationToUsers/>} />
+              {/* <Route path='/SendNotificationToUsers' element={<SendNotificationToUsers/>} /> */}
               <Route path='/LogOut' element={<LogOut/>} />
             </Routes>
-          </Sidebar>
+            </Sidebar>
         </Router>
         </div>
         );
       };
-    
-
 export default App;
