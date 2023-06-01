@@ -80,7 +80,7 @@ const FindUserDetails = () => {
           FIND
         </button>
         </div>
-        <div className="st-detail">
+        <div className="st-detail"> 
               <h4><b>{user.name}</b></h4> 
               <p>{user.email}</p>
               <p>{user.branch}</p>
@@ -92,5 +92,4 @@ const FindUserDetails = () => {
       </>
     );
 };
-
 export default FindUserDetails;

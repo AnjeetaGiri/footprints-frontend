@@ -38,6 +38,7 @@
    }
     
    .bars{
+    /* display: none; */
     cursor: pointer;
     align-items:left;
     display: flex-start;

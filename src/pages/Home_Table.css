@@ -128,12 +128,12 @@
     /* min-width:100%;
  } */ 
 
- tbody{
+ /* tbody{
     margin:0;
     padding:2px;
     font-family:sans-serif;
     box-sizing: border-box;
-  }
+  } */
   /* *{
     box-sizing:border-box;
   } */
@@ -142,28 +142,25 @@
     border-collapse:collapse;
     box-sizing:border-box;
   } */
-  .userTable td,.userTable th{
-    /* padding:6px 10px; */
+  /* .userTable td,.userTable th{
     padding:6px 10px;
-    /* padding:20px 30px; */
     border:2px solid black;
     text-align:center;
     font-size:25px;
     font-weight: 200;
-    /* background-color: rgba(19, 22, 220, 0.341); */
      background-color: rgba(5, 8, 200, 0.482);
-  }
-  .userTable th{
+  } */
+  /* .userTable th{
     background-color:rgb(0, 7, 61);
     color:white;
   
   }
   .userTable tbody tr:nth-child(even){
     background-color:white;
-  }
+  } */
   
   /* -----------------RESPONSIVE---------------- */
-  @media(max-width:600px){
+  /* @media(max-width:600px){
     .home{
         margin:10px;
         height:93vh;
@@ -186,9 +183,9 @@
     .userTable td{
         text-align:center;
         padding-left:50%;
-        position:relative;
+        position:relative; */
         /* background-color: rgb(245, 133, 133); */
-    }
+    /* }
     .userTable td::before{
         content:attr(data-label);
         position:absolute;
@@ -205,4 +202,4 @@
         width:100%;
     }
   
-  }
+  } */

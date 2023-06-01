@@ -22,7 +22,7 @@ const[staff,setstaff]=useState([]);
       const data=await result.json();
       if(data){
          setstaff(data.data);
-        staff.map((stf)=>{
+         staff.map((stf)=>{
           console.log(stf.email,stf.password);
           if(stf.email == email && stf.password == password){
           setisLogin(1);
@@ -32,8 +32,11 @@ const[staff,setstaff]=useState([]);
        // console.log(isLogin);
         if(isLogin === 1){
           alert('User loggedIn successfully');
-          document.getElementsByClassName("login-home").display="none";
-          document.getElementsByClassName("sidebar").display="none";
+          var bars=document.getElementsByClassName("bars");
+          var sidebar=document.getElementsByClassName("sidebar");
+          console.log(bars,sidebar);
+          bars.style.display = "block";
+          sidebar.style.display = "block";
         }else{
           alert("Invalid credential");
         }
@@ -44,8 +47,8 @@ const[staff,setstaff]=useState([]);
       <>
      
     <div className="login">
-      {/* <h1>Login</h1> */}
-      <img className="login-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTwnmjjYqep6zgprV4qySbc2iy583aqqN9t11aiH4oHw&s" alt="login-icon"/>
+      <h1>Login</h1>
+      {/* <img className="login-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTwnmjjYqep6zgprV4qySbc2iy583aqqN9t11aiH4oHw&s" alt="login-icon"/> */}
       <input type="text" name="email"  onChange={(e)=>setEmail(e.target.value)}  placeholder="Enter your Email" required/>
       <input type="password" name="password" onChange={(e)=>setPassword(e.target.value)} placeholder="Enter your password" required/>
 

@@ -7,7 +7,6 @@
     import AddNewUser from './pages/AddNewUser';
     import Notice from './pages/Notice';
     import LogsViewer from './pages/LogsViewer';
-    import privateroutes from './components/privateroutes';
     import LogOut from './pages/LogOut';
     import Sidebar from './components/Sidebar';
     import Toolbar from './components/Logo';

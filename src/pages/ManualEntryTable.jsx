@@ -13,7 +13,7 @@ export default function Late() {
     setState(!state);
   }
   return ( 
-    <div className="table-box">
+    <div className="Table_container">
         <table>
             <tr>
                 <th>User ID</th>
@@ -22,6 +22,7 @@ export default function Late() {
                 <th>InTime</th>
                 <th>Status</th>
                 <th>Purpose</th>
+                <th>Make Changes</th>
             </tr>
             <tbody>
                 {data.map((value,key)=>{
@@ -33,7 +34,6 @@ export default function Late() {
                                 <td>{value.inTime}</td>
                                 <td>{value.inOutStat}</td>
                                 <td>{value.purpose}</td>
-                                {/* <td>{value.changes}</td> */}
                                 <td><button onClick={toggle} className={'toggle--button'+(state?'toggle--in':'')}> {state?'out':'in'}</button></td>
                             </tr>)
                     })}

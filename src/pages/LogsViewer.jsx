@@ -4,6 +4,12 @@ import React, { useState } from "react";
 import './LogsViewer.css';
 
 const LogsViewer = () => {
+  const [abc,setabc]=useState({
+    name:"Name",
+    inTime:"in Time",
+    status:"Status",
+    purpose:"Purpose"
+  })
   const [user, setUser] = useState({
     userID: "",
     done_by: "",
@@ -12,7 +18,6 @@ const LogsViewer = () => {
     Status: "",
     purpose: "",
   });
-
   const handleInputs = (e) => {
     console.log(e);
     const { name, value } = e.target;
@@ -87,39 +92,13 @@ const res= await fetch("/userlogs",{
       </button>
       </div>
       <div className="st-logs">
-          {/* <h4 className="heading-4">Details of Student: </h4> */}
-          {/* <div className="stLog-container"> */}
+          <div className="stLog-container">
               <h4>{user.done_by}</h4>
-              <p>{user.inTime}</p><br/>
-              <p>{user.Status}</p><br/>
+              <p>{user.inTime}</p>
+              <p>{user.Status}</p>
               <p>{user.purpose}</p>
-        </div>
-          {/* <table className="UserDetailTable"> */}
-            {/* <thead>
-              <tr>
-                <th>User ID</th>
-                <th>Email</th>
-                <th>Branch</th>
-                <th>Session</th>
-                <th>Hostel</th>
-                <th>Room No.</th>
-              </tr>
-            </thead> */}
-            {/* <tbody>
-              <tr>
-                <td data-label="Done by">{user.done_by}</td>
-                <td data-label="In Time">{user.inTime}</td>
-                <td data-label="Status">{user.Status}</td>
-                <td data-label="Purpose">{user.purpose}</td>
-              </tr>
-            </tbody>
-          </table> */}
-
-      
-        {/* <div className="btn">
-       <button class="btn" type="button" onClick={Popup}>Submit</button>
-       </div> */}
-      
+          </div>
+      </div>  
     </>
   );
 };

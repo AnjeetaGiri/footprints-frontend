@@ -1,29 +1,25 @@
-import React,{useState} from "react";
-import "./Home_Table.css";
-// import fakeData from './Mock-data.json'
-const Home_Table = () => {
-  const[admin,setAdmin]=useState({
-    name:"",
-    role:"",
-    // hostel:"BH-2"
-  });
-  const data=[
-    {rollNo:"1908410100011",date:"22/05/2023",outTime:"7:00 PM",doneBy:"Anjeeta",place:"Churk",status:"Out"},
-    {rollNo:"1908410100055",date:"22/05/2023",outTime:"6:00 PM",doneBy:"Saumya",place:"Robertsganj",status:"Out"},
-    {rollNo:"1908410100005",date:"16/05/2023",outTime:"4:33 PM",doneBy:"Akarshit",place:"Home",status:"Out"},
-    {rollNo:"1908410100001",date:"22/05/2023",outTime:"1:45 PM",doneBy:"Abhimanyu",place:"Churk",status:"Out"},
-  ]
-  return (
-    <div className="home">
-      <div id="UpperBar">
-        <div>{admin.name}</div>
-        <div>{admin.role}</div>
-        {/* <div>{admin.hostel}</div> */}
-      </div>
-        {/* <div className="list-students">  */}
-        <div className="Heading">
-            <h4>List of Student haven't returned till 9:00PM</h4>
-        </div>
+// import React,{useState} from "react";
+// import "./Home_Table.css";
+// const Home_Table = () => {
+//   const[admin,setAdmin]=useState({
+//     name:"",
+//     role:"",
+//   });
+//   const data=[
+//     {rollNo:"1908410100011",date:"22/05/2023",outTime:"7:00 PM",doneBy:"Anjeeta",place:"Churk",status:"Out"},
+//     {rollNo:"1908410100055",date:"22/05/2023",outTime:"6:00 PM",doneBy:"Saumya",place:"Robertsganj",status:"Out"},
+//     {rollNo:"1908410100005",date:"16/05/2023",outTime:"4:33 PM",doneBy:"Akarshit",place:"Home",status:"Out"},
+//     {rollNo:"1908410100001",date:"22/05/2023",outTime:"1:45 PM",doneBy:"Abhimanyu",place:"Churk",status:"Out"},
+//   ]
+//   return (
+//     <div className="home">
+//       <div id="UpperBar">
+//         <div>{admin.name}</div>
+//         <div>{admin.role}</div>
+//       </div>
+//         <div className="Heading">
+//             <h4>List of Student haven't returned till 9:00PM</h4>
+//         </div>
         
         {/* </div> */}
         {/* <table className="userTable">
@@ -49,7 +45,7 @@ const Home_Table = () => {
         })}
         </table> */}
         {/* -------New Code--------- */}
-        <table className="userTable">
+        {/* <table className="userTable">
           <thead>
             <tr>
                 <th >Roll No.</th>
@@ -79,4 +75,4 @@ const Home_Table = () => {
   );
 };
 
-export default Home_Table;
+export default Home_Table; */}

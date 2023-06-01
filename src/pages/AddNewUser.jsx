@@ -189,8 +189,9 @@ const AddNewUser = () => {
           </div>
           <button className="Add_btn" >ADD</button>
         </form>
+        <div className="message">{message ? <h3>{message}</h3> : null}</div>
       </div>
-      <div className="message">{message ? <p>{message}</p> : null}</div>
+      
     </div>
   );
 };
